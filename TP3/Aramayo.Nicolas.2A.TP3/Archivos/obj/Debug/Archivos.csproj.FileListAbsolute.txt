@@ -1,0 +1,4 @@
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Texto\bin\Debug\Texto.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Texto\bin\Debug\Texto.pdb
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Texto\obj\Debug\Texto.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Texto\obj\Debug\Texto.pdb

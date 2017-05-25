@@ -1,0 +1,5 @@
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Excepciones\bin\Debug\Excepciones.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Excepciones\bin\Debug\Excepciones.pdb
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Excepciones\obj\Debug\Excepciones.csprojResolveAssemblyReference.cache
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Excepciones\obj\Debug\Excepciones.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\Excepciones\obj\Debug\Excepciones.pdb

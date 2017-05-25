@@ -1,0 +1,7 @@
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.pdb
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojResolveAssemblyReference.cache
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
