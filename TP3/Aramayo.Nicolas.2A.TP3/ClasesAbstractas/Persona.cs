@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Excepciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,20 @@ namespace ClasesAbstractas
 
         public enum ENacionalidad
         {
-
+            Argentino, Extranjero
         }
 
 
         public string Apellido
         {
             get { return this._apellido; }
-            set { this._apellido = value; }
+            set
+            {
+                if (!String.IsNullOrEmpty(ValidarNombreApellido(value)))
+                {
+                    this._apellido = value;
+                }
+            }
         }
 
         public int DNI
@@ -40,7 +47,13 @@ namespace ClasesAbstractas
         public string Nombre
         {
             get { return this._nombre; }
-            set { this._nombre = value; }
+            set
+            {
+                if (!String.IsNullOrEmpty(ValidarNombreApellido(value)))
+                {
+                    this._nombre = value;
+                }
+            }
         }
 
         //public string StringToDni
@@ -51,21 +64,58 @@ namespace ClasesAbstractas
         public Persona()
         { }
 
-        public Persona(string nombre,string apellido,ENacionalidad nacionalidad)
+        public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this.Apellido = apellido;
             this.Nombre = nombre;
             this.Nacionalidad = nacionalidad;
         }
 
-        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad):this(nombre,apellido,nacionalidad)
+        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
             this.DNI = dni;
         }
 
-        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad):this(nombre,apellido,nacionalidad)
+        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
 
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        private int ValidarDni(ENacionalidad nacionalidad, int dato)
+        {
+            if (ENacionalidad.Argentino == nacionalidad && 1 <= dato || dato <= 89999999)
+            {
+                return dato;
+            }
+            throw new DniInvalidoException();
+        }
+
+        private int ValidarDni(ENacionalidad nacionalidad, string dato)
+        {
+            return 0;
+        }
+
+        private string ValidarNombreApellido(string dato)
+        {
+            if (string.IsNullOrEmpty(dato))
+            {
+                return null;
+            }
+
+            for (int i = 0; i < dato.Length; i++)
+            {
+                if (!char.IsLetter(dato, i))
+                {
+                    return null;
+                }
+            }
+
+            return dato;
         }
     }
 }
