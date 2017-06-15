@@ -8,5 +8,12 @@ namespace ClasesInstanciables
 {
     public class Universidad
     {
+
+
+
+        public enum EClases
+        {
+            Programacion, Laboratorio, Legislacion, SPD
+        }
     }
 }

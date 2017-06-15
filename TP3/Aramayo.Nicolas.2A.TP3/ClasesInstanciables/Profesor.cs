@@ -7,8 +7,15 @@ using ClasesAbstractas;
 
 namespace ClasesInstanciables
 {
-    public sealed class Profesor:Universitario
+    public sealed class Profesor : Universitario
     {
 
+
+
+
+        protected override string ParticiparEnClase()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
