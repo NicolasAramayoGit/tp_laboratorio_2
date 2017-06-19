@@ -54,7 +54,7 @@ namespace ClasesInstanciables
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("CLASE DE ", this._clasesDelDia.Peek()); // Peek(). Devuelve el primer objeto que se encuentre sin eliminarlo.
             sb.Append("POR " +  base.ToString());
-
+            
             return sb.ToString();
         }
 
