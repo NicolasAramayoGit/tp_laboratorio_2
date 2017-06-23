@@ -26,11 +26,30 @@ namespace ClasesInstanciables
 
         }
 
+        /// <summary>
+        /// Constructor que llama al base y toma como párametro un EClase.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="dni"></param>
+        /// <param name="nacionalidad"></param>
+        /// <param name="claseQueToma"></param>
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma):base(id,nombre,apellido,dni,nacionalidad)
         {
             this._claseQueToma = claseQueToma;
         }
 
+        /// <summary>
+        /// Sobreecarga del constructor que llama al anterior y que agrega un EEstadoCuenta.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="dni"></param>
+        /// <param name="nacionalidad"></param>
+        /// <param name="claseQueToma"></param>
+        /// <param name="estadoCuenta"></param>
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta):this(id,nombre,apellido,dni,nacionalidad,claseQueToma)
         {
             this._estadoCuenta = estadoCuenta;
@@ -68,11 +87,23 @@ namespace ClasesInstanciables
             return "TOMA CLASE DE: " + this._claseQueToma.ToString();
         }
 
+        /// <summary>
+        /// Alumno es igual EClase si toma esa clase y su estado de cuenta no es deudor.
+        /// </summary>
+        /// <param name="a">Alumno</param>
+        /// <param name="clase">Clase que toma</param>
+        /// <returns></returns>
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             return a._claseQueToma == clase && a._estadoCuenta != EEstadoCuenta.Deudor;
         }
 
+        /// <summary>
+        /// Un Alumno es distinto a un EClase si no toma esa clase.
+        /// </summary>
+        /// <param name="a1"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator !=(Alumno a1, Universidad.EClases clase)
         {
             return a1._claseQueToma != clase;
