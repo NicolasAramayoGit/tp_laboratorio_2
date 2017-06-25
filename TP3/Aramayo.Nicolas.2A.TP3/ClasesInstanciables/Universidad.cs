@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace ClasesInstanciables
 {
@@ -108,7 +110,7 @@ namespace ClasesInstanciables
                     return profesor; // revisar si funciona correctamente.
                 }
             }
-
+            
             throw new SinProfesorException();
         }
 
@@ -157,7 +159,72 @@ namespace ClasesInstanciables
         }
 
 
-#endregion
+        #endregion
+
+        /// <summary>
+        /// Devuelve una cadena con todos los datos de la Universidad.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Universidad.MostrarDatos(this);
+        }
+
+        /// <summary>
+        /// Retorna una cadena con los datos de clase Universidad.
+        /// </summary>
+        /// <returns></returns>
+        private static string MostrarDatos(Universidad gim)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (Jornada j in gim._jornada)
+            {
+                sb.AppendLine(j.ToString());
+            }
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Serializa los datos de la Universidad en un XML, incluyendo los datos de Profesores, Alumnos y Jornadas.
+        /// </summary>
+        /// <param name="gim"></param>
+        /// <returns></returns>
+        public static bool Guardar(Universidad gim)
+        {
+            try
+            {
+                XmlSerializer serializador = new XmlSerializer(typeof(Universidad));
+                using (XmlTextWriter escritor = new XmlTextWriter("Datos.xml",Encoding.UTF8))
+                {
+                    serializador.Serialize(escritor, gim);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocurrio un Error al Serializar objeto Universidad..." + ex.Message);
+            }
+            
+            return true;
+        }
+
+        /// <summary>
+        /// Retorna una Universidad con todos los datos previamente serializados.
+        /// </summary>
+        /// <param name="gim"></param>
+        /// <returns></returns>
+        public static Universidad Leer(Universidad gim)
+        {
+            if (Universidad.Guardar(gim))
+            {
+                return gim;
+            }
+
+            return null;
+        }
+
+
 
         public enum EClases
         {
