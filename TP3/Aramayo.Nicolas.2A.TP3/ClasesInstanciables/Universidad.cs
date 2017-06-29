@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using Archivos;
 
 namespace ClasesInstanciables
 {
@@ -202,17 +203,14 @@ namespace ClasesInstanciables
         {
             try
             {
-                XmlSerializer serializador = new XmlSerializer(typeof(Universidad));
-                using (XmlTextWriter escritor = new XmlTextWriter("Datos.xml",Encoding.UTF8))
-                {
-                    serializador.Serialize(escritor, gim);
-                }
+                Xml<Universidad> xml = new Xml<Universidad>();
+                xml.Guardar("Universidad.xml", gim);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new Exception("Ocurrio un Error al Serializar objeto Universidad..." + ex.Message);
+                throw new ArchivosException();
             }
-            
+
             return true;
         }
 
@@ -223,12 +221,20 @@ namespace ClasesInstanciables
         /// <returns></returns>
         public static Universidad Leer(Universidad gim)
         {
-            if (Universidad.Guardar(gim))
+            Universidad u;
+            try
             {
-                return gim;
+                Xml<Universidad> xml = new Xml<Universidad>();
+                
+                xml.Leer("Universidad.xml", out u);
             }
+            catch (Exception)
+            {
 
-            return null;
+                throw new ArchivosException();
+            }
+            
+            return u;
         }
 
         #endregion

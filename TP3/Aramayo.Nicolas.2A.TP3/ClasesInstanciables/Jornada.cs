@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Archivos;
 
 namespace ClasesInstanciables
 {
@@ -132,6 +133,10 @@ namespace ClasesInstanciables
             {
                 j._alumnos.Add(a);
             }
+            else
+            {
+                throw new AlumnoRepetidoException();
+            }
 
             return j;
         }
@@ -152,6 +157,10 @@ namespace ClasesInstanciables
 
             sb.AppendLine("JORNADA:");
             sb.AppendLine(this._instructor.ToString());
+            if (this.Alumnos.Count == 0)
+            {
+                sb.AppendLine("NO HAY ALUMNOS");
+            }
             sb.AppendLine("ALUMNOS");
 
             foreach (Alumno a in this._alumnos)
@@ -172,21 +181,11 @@ namespace ClasesInstanciables
         /// </summary>
         /// <param name="jornada"></param>
         /// <returns></returns>
-        public bool Guardar(Jornada jornada)
+        public static bool Guardar(Jornada jornada)
         {
-            try
-            {//UTILIZAR TEXTO
-                using (StreamWriter escritor = new StreamWriter("Jornada.txt"))
-                {
-                    escritor.WriteLine(jornada.ToString());
-                }
-            }
-            catch (Exception)
-            {
-                throw new ArchivosException();
-            }
+            Texto texto = new Texto();
+            return texto.Guardar("Jornada.txt", jornada.ToString());
 
-            return true;
         }
 
         /// <summary>
@@ -195,22 +194,11 @@ namespace ClasesInstanciables
         /// <returns></returns>
         public string Leer()
         {
-            StringBuilder sb = new StringBuilder();
-            //UTILIZAR TEXTO
-            try
-            {
-                using (StreamReader lector = new StreamReader("Jornada.txt"))
-                {
-                    sb.AppendLine(lector.ReadLine());
-                }
-            }
-            catch (Exception)
-            {
+            Texto texto = new Texto();
+            string datos;
+            texto.Leer("Jornada.txt", out datos);
+            return datos;
 
-                throw new ArchivosException();
-            }
-
-            return sb.ToString();
         }
 
         #endregion

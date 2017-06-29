@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Texto
+namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
     {
