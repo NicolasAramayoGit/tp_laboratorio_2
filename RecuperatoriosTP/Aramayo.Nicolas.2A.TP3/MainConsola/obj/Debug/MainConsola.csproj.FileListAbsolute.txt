@@ -1,0 +1,14 @@
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\obj\Debug\MainConsola.csprojResolveAssemblyReference.cache
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\MainConsola.exe.config
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\MainConsola.exe
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\MainConsola.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\ClasesInstanciables.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\EntidadesAbstractas.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\Excepciones.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\Archivos.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\ClasesInstanciables.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\Excepciones.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\bin\Debug\Archivos.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\obj\Debug\MainConsola.exe
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\MainConsola\obj\Debug\MainConsola.pdb

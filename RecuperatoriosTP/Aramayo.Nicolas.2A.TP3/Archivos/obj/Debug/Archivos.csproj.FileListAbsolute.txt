@@ -1,0 +1,7 @@
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\bin\Debug\Archivos.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\bin\Debug\Archivos.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\bin\Debug\Excepciones.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\bin\Debug\Excepciones.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\obj\Debug\Archivos.csprojResolveAssemblyReference.cache
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\obj\Debug\Archivos.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\Archivos\obj\Debug\Archivos.pdb
