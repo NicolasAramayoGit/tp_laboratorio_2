@@ -1,11 +1,10 @@
-﻿using Excepciones;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Archivos;
+using Excepciones;
 
 namespace ClasesInstanciables
 {
@@ -83,7 +82,7 @@ namespace ClasesInstanciables
         /// </summary>
         /// <param name="clase"></param>
         /// <param name="instructor"></param>
-        public Jornada(Universidad.EClases clase, Profesor instructor):this()
+        public Jornada(Universidad.EClases clase, Profesor instructor) : this()
         {
             this._clase = clase;
             this._instructor = instructor;
@@ -174,7 +173,7 @@ namespace ClasesInstanciables
         }
 
 
-        
+
 
         /// <summary>
         /// Guarda los datos de la Jornada en un archivo txt.

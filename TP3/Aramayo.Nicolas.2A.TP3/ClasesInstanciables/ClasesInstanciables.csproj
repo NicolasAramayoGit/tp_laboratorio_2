@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46E700C6-7E1E-4C8B-95E9-3C726E055AA3}</ProjectGuid>
+    <ProjectGuid>{66B045A6-47B0-4489-B5DF-5BC1D8487246}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClasesInstanciables</RootNamespace>
     <AssemblyName>ClasesInstanciables</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -43,21 +43,21 @@
     <Compile Include="Alumno.cs" />
     <Compile Include="Jornada.cs" />
     <Compile Include="Profesor.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Universidad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClasesAbstractas\ClasesAbstractas.csproj">
-      <Project>{87b9c8ca-0076-4e97-9f12-e7ebf6851a8b}</Project>
-      <Name>ClasesAbstractas</Name>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{99e2115d-4dad-4802-84b4-b067af88b9a5}</Project>
+      <Name>Archivos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadesAbstractas\EntidadesAbstractas.csproj">
+      <Project>{33ff3461-27b0-4c7b-bb4a-0a8a21e811d6}</Project>
+      <Name>EntidadesAbstractas</Name>
     </ProjectReference>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj">
-      <Project>{C306A8E3-ACBB-4DEF-8039-90A1BE484263}</Project>
+      <Project>{53bf56f4-1961-402f-b2a9-9527253ca3e8}</Project>
       <Name>Excepciones</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Texto\Archivos.csproj">
-      <Project>{4E23B112-778F-4686-B4B9-33C3BCFEC252}</Project>
-      <Name>Archivos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

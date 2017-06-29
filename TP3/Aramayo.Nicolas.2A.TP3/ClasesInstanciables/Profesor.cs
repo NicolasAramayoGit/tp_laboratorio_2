@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClasesAbstractas;
+using EntidadesAbstractas;
 
 namespace ClasesInstanciables
 {
-    public sealed class Profesor : Universitario
+    public class Profesor:Universitario
     {
-        private Queue<Universidad.EClases>_clasesDelDia;
+        private Queue<Universidad.EClases> _clasesDelDia;
         private static Random _random;
 
         /// <summary>
@@ -36,14 +36,14 @@ namespace ClasesInstanciables
         /// <param name="apellido"></param>
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
-        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad):base(id,nombre,apellido,dni,nacionalidad)
+        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(id, nombre, apellido, dni, nacionalidad)
         {
             // Llamo al objeto random, ELIJO UN ENUMERADO AL AZAR, luego el resultado de tipo
             // entero lo CASTEO a un enumerado de tipo EClases
             // Y lo agrego a la cola.
             this._clasesDelDia = new Queue<Universidad.EClases>();
-            this._clasesDelDia.Enqueue( (Universidad.EClases)Profesor._random.Next(0,3) );
-            this._clasesDelDia.Enqueue( (Universidad.EClases)Profesor._random.Next(0,3) );
+            this._clasesDelDia.Enqueue((Universidad.EClases)Profesor._random.Next(0, 3));
+            this._clasesDelDia.Enqueue((Universidad.EClases)Profesor._random.Next(0, 3));
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace ClasesInstanciables
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("CLASE DE ", this._clasesDelDia.Peek()); // Peek(). Devuelve el primer objeto que se encuentre sin eliminarlo.
-            sb.Append("POR " +  base.ToString());
-            
+            sb.Append("POR " + base.ToString());
+
             return sb.ToString();
         }
 
@@ -106,6 +106,5 @@ namespace ClasesInstanciables
         {
             return base.MostrarDatos(); // verificar si cumple con lo pedido.
         }
-
     }
 }

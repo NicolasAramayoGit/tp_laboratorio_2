@@ -1,0 +1,11 @@
+JORNADA:
+CLASE DE POR NOMBRE COMPLETO: Lopez, JuanNACIONALIDAD: Argentino
+
+ALUMNOS
+NOMBRE COMPLETO: Suarez, JoaquinNACIONALIDAD: Extranjero
+LEGAJO: 7
+
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE: Laboratorio
+
+<----------------------------------------------->

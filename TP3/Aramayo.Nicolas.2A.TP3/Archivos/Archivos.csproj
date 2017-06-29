@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E23B112-778F-4686-B4B9-33C3BCFEC252}</ProjectGuid>
+    <ProjectGuid>{99E2115D-4DAD-4802-84B4-B067AF88B9A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Texto</RootNamespace>
-    <AssemblyName>Texto</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Archivos</RootNamespace>
+    <AssemblyName>Archivos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -40,9 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IArchivos.cs" />
     <Compile Include="Texto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Xml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{53bf56f4-1961-402f-b2a9-9527253ca3e8}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

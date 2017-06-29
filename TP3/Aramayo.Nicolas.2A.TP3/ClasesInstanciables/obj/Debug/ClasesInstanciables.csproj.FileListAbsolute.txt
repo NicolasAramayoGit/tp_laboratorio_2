@@ -1,7 +1,11 @@
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.dll
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.pdb
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojResolveAssemblyReference.cache
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojResolveAssemblyReference.cache
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\Archivos.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\EntidadesAbstractas.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\Excepciones.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\Archivos.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\bin\Debug\Excepciones.pdb
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\WALLYDELL\Desktop\Aramayo.Nicolas.2A.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb

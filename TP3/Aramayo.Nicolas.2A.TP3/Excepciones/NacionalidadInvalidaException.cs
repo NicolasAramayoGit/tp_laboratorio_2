@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
-    public class NacionalidadInvalidaException : Exception
+    public class NacionalidadInvalidaException:Exception
     {
-        public NacionalidadInvalidaException(string message) : base(message)
+        public NacionalidadInvalidaException()
+            : base("La nacionalidad no se coincide con el Número de DNI")
         {
+
+        }
+        public NacionalidadInvalidaException(string message)
+            : base(message)
+        {
+
         }
     }
 }

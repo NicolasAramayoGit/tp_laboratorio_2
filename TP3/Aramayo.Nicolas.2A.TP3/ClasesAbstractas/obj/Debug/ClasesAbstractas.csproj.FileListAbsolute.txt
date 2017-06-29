@@ -1,5 +1,0 @@
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesAbstractas\bin\Debug\ClasesAbstractas.dll
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesAbstractas\bin\Debug\ClasesAbstractas.pdb
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.csprojResolveAssemblyReference.cache
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.dll
-c:\users\wallydell\documents\visual studio 2017\Projects\Aramayo.Nicolas.2A.TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.pdb

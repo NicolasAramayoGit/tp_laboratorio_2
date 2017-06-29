@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClasesAbstractas;
+using EntidadesAbstractas;
 
 namespace ClasesInstanciables
 {
-    public sealed class Alumno : Universitario
+    public class Alumno:Universitario
     {
-
         private Universidad.EClases _claseQueToma;
         private EEstadoCuenta _estadoCuenta;
 
@@ -35,7 +34,7 @@ namespace ClasesInstanciables
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
         /// <param name="claseQueToma"></param>
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma):base(id,nombre,apellido,dni,nacionalidad)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma) : base(id, nombre, apellido, dni, nacionalidad)
         {
             this._claseQueToma = claseQueToma;
         }
@@ -50,7 +49,7 @@ namespace ClasesInstanciables
         /// <param name="nacionalidad"></param>
         /// <param name="claseQueToma"></param>
         /// <param name="estadoCuenta"></param>
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta):this(id,nombre,apellido,dni,nacionalidad,claseQueToma)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this._estadoCuenta = estadoCuenta;
         }
@@ -66,7 +65,7 @@ namespace ClasesInstanciables
             sb.AppendLine("ESTADO DE CUENTA: " + this._estadoCuenta.ToString());
             sb.AppendLine(this.ParticiparEnClase());
 
-            return sb.ToString(); 
+            return sb.ToString();
         }
 
         /// <summary>

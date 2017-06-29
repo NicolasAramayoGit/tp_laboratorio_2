@@ -1,11 +1,9 @@
-﻿using Excepciones;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
+using Excepciones;
 using Archivos;
 
 namespace ClasesInstanciables
@@ -115,7 +113,7 @@ namespace ClasesInstanciables
                     return profesor; // revisar si funciona correctamente.
                 }
             }
-            
+
             throw new SinProfesorException();
         }
 
@@ -161,6 +159,81 @@ namespace ClasesInstanciables
         public static bool operator !=(Universidad u, Profesor p)
         {
             return !(u == p);
+        }
+
+
+        /// <summary>
+        /// Agrega un alumno a la universidad.
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static Universidad operator +(Universidad u, Alumno a)
+        {
+            bool estado = true;
+
+            foreach (Alumno alumno in u.Alumnos)
+            {
+                if (alumno == a)
+                {
+                    estado = false;
+                    break;
+                }
+            }
+            if (estado)
+            {
+                u.Alumnos.Add(a);
+            }
+            else
+            {
+                throw new AlumnoRepetidoException();
+            }
+
+            return u;
+        }
+
+        /// <summary>
+        /// Agrega un profesor a la universidad.
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
+        public static Universidad operator +(Universidad u, Profesor i)
+        {
+            bool estado = true;
+            foreach (Profesor item in u.Instructores)
+            {
+                if (item == i)
+                {
+                    estado = false;
+                    break;
+                }
+            }
+            if (estado)
+            {
+                u.Instructores.Add(i);
+            }
+            return u;
+        }
+
+        /// <summary>
+        /// Agrega una clase a la universidad y agrega una nueva jornada.
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
+        public static Universidad operator +(Universidad u, EClases clase)
+        {
+            Jornada nuevaJornada = new Jornada(clase, (u == clase));
+            foreach (Alumno item in u.Alumnos)
+            {
+                if (item == clase)
+                {
+                    nuevaJornada = nuevaJornada + item;
+                }
+            }
+            u._jornada.Add(nuevaJornada);
+            return u;
         }
 
 
@@ -225,7 +298,7 @@ namespace ClasesInstanciables
             try
             {
                 Xml<Universidad> xml = new Xml<Universidad>();
-                
+
                 xml.Leer("Universidad.xml", out u);
             }
             catch (Exception)
@@ -233,7 +306,7 @@ namespace ClasesInstanciables
 
                 throw new ArchivosException();
             }
-            
+
             return u;
         }
 
@@ -244,4 +317,5 @@ namespace ClasesInstanciables
             Programacion, Laboratorio, Legislacion, SPD
         }
     }
+
 }
