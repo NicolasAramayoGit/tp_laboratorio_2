@@ -60,10 +60,14 @@ namespace ClasesInstanciables
 
         #region Constructor.
 
-
+        /// <summary>
+        /// Constructor por defecto, inicializa los atributos.
+        /// </summary>
         public Universidad()
         {
-
+            this._alumnos = new List<Alumno>();
+            this._profesores = new List<Profesor>();
+            this._jornada = new List<Jornada>();
         }
 
         #endregion
@@ -161,6 +165,9 @@ namespace ClasesInstanciables
 
         #endregion
 
+
+        #region Métodos.
+
         /// <summary>
         /// Devuelve una cadena con todos los datos de la Universidad.
         /// </summary>
@@ -224,7 +231,7 @@ namespace ClasesInstanciables
             return null;
         }
 
-
+        #endregion
 
         public enum EClases
         {

@@ -16,6 +16,9 @@ namespace ClasesInstanciables
 
         #region Propiedades.
 
+        /// <summary>
+        /// Propiedad de lectura y escritura, retorna una lista de alumnos.
+        /// </summary>
         public List<Alumno> Alumnos
         {
             get
@@ -29,6 +32,9 @@ namespace ClasesInstanciables
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura, retorna un enumerado de tipo EClases.
+        /// </summary>
         public Universidad.EClases Clase
         {
             get
@@ -42,6 +48,9 @@ namespace ClasesInstanciables
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura que retorna un profesor.
+        /// </summary>
         public Profesor Instructor
         {
             get
@@ -57,6 +66,8 @@ namespace ClasesInstanciables
 
 
         #endregion
+
+        #region Constructores.
 
         /// <summary>
         /// Constructor por defecto inicializa la lista de alumnos.
@@ -77,6 +88,9 @@ namespace ClasesInstanciables
             this._instructor = instructor;
         }
 
+
+        #endregion
+
         #region Operadores == != + 
 
         /// <summary>
@@ -89,7 +103,7 @@ namespace ClasesInstanciables
         {
             foreach (Alumno alumno in j._alumnos)
             {
-                if (a == j._clase)
+                if (a == alumno)
                 {
                     return true;
                 }
@@ -124,6 +138,10 @@ namespace ClasesInstanciables
 
         #endregion
 
+
+        #region Métodos.
+
+
         /// <summary>
         /// Muestra todos los datos de la clase Jornada.
         /// </summary>
@@ -146,6 +164,9 @@ namespace ClasesInstanciables
             return sb.ToString();
         }
 
+
+        
+
         /// <summary>
         /// Guarda los datos de la Jornada en un archivo txt.
         /// </summary>
@@ -154,7 +175,7 @@ namespace ClasesInstanciables
         public bool Guardar(Jornada jornada)
         {
             try
-            {
+            {//UTILIZAR TEXTO
                 using (StreamWriter escritor = new StreamWriter("Jornada.txt"))
                 {
                     escritor.WriteLine(jornada.ToString());
@@ -175,7 +196,7 @@ namespace ClasesInstanciables
         public string Leer()
         {
             StringBuilder sb = new StringBuilder();
-
+            //UTILIZAR TEXTO
             try
             {
                 using (StreamReader lector = new StreamReader("Jornada.txt"))
@@ -191,6 +212,8 @@ namespace ClasesInstanciables
 
             return sb.ToString();
         }
+
+        #endregion
 
     }
 }

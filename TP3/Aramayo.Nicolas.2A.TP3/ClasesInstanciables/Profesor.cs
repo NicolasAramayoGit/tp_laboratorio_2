@@ -41,6 +41,7 @@ namespace ClasesInstanciables
             // Llamo al objeto random, ELIJO UN ENUMERADO AL AZAR, luego el resultado de tipo
             // entero lo CASTEO a un enumerado de tipo EClases
             // Y lo agrego a la cola.
+            this._clasesDelDia = new Queue<Universidad.EClases>();
             this._clasesDelDia.Enqueue( (Universidad.EClases)Profesor._random.Next(0,3) );
             this._clasesDelDia.Enqueue( (Universidad.EClases)Profesor._random.Next(0,3) );
         }
