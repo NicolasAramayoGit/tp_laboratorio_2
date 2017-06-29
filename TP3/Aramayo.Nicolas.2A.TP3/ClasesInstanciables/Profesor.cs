@@ -46,17 +46,26 @@ namespace ClasesInstanciables
             this._clasesDelDia.Enqueue((Universidad.EClases)Profesor._random.Next(0, 3));
         }
 
+
+        /// <summary>
+        /// Sobreescritura del método, muestra todos los datos del alumno.
+        /// </summary>
+        /// <returns></returns>
+        protected override string MostrarDatos()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.MostrarDatos());
+            sb.Append(this.ParticiparEnClase());
+            return sb.ToString(); 
+        }
+
         /// <summary>
         /// Muestran todos los datos del profesor.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("CLASE DE ", this._clasesDelDia.Peek()); // Peek(). Devuelve el primer objeto que se encuentre sin eliminarlo.
-            sb.Append("POR " + base.ToString());
-
-            return sb.ToString();
+            return this.MostrarDatos();
         }
 
         /// <summary>
@@ -65,7 +74,24 @@ namespace ClasesInstanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            return "CLASE DEL DÍA: " + this._clasesDelDia.Peek().ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("CLASES DEL DIA: ");
+            foreach (Universidad.EClases item in this._clasesDelDia)
+            {
+                sb.AppendLine(item.ToString());
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Agrega una clase random a la cola de clases.
+        /// </summary>
+        private void _randomClases()
+        {
+            Universidad.EClases clase;
+            clase = (Universidad.EClases)_random.Next(0, 4);
+            this._clasesDelDia.Enqueue(clase);
+
         }
 
         /// <summary>
@@ -98,13 +124,6 @@ namespace ClasesInstanciables
             return !(i == clase);
         }
 
-        /// <summary>
-        /// Sobreescritura del método, muestra todos los datos del alumno.
-        /// </summary>
-        /// <returns></returns>
-        protected override string MostrarDatos()
-        {
-            return base.MostrarDatos(); // verificar si cumple con lo pedido.
-        }
+        
     }
 }

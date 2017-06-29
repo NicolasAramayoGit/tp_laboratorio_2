@@ -155,13 +155,12 @@ namespace ClasesInstanciables
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("JORNADA:");
-            sb.AppendLine(this._instructor.ToString());
+            sb.AppendLine("CLASE DE " + this._clase.ToString() + " POR " + this._instructor.ToString());
             if (this.Alumnos.Count == 0)
             {
                 sb.AppendLine("NO HAY ALUMNOS");
             }
             sb.AppendLine("ALUMNOS");
-
             foreach (Alumno a in this._alumnos)
             {
                 sb.AppendLine(a.ToString());

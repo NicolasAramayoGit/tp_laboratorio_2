@@ -5,9 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
 using Archivos;
+using System.Xml.Serialization;
 
 namespace ClasesInstanciables
 {
+    [Serializable]
+    [XmlInclude(typeof(Alumno))]
+    [XmlInclude(typeof(Profesor))]
+    [XmlInclude(typeof(Jornada))]
     public class Universidad
     {
         private List<Alumno> _alumnos;
@@ -107,10 +112,10 @@ namespace ClasesInstanciables
         public static Profesor operator ==(Universidad u, EClases clase)
         {
             foreach (Profesor profesor in u.Instructores)
-            { // Si no hay profesores ???
+            { 
                 if (profesor == clase)
                 {
-                    return profesor; // revisar si funciona correctamente.
+                    return profesor;
                 }
             }
 

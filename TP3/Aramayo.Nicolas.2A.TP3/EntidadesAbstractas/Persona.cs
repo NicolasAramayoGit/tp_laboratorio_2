@@ -114,7 +114,7 @@ namespace EntidadesAbstractas
 
             //sb.AppendLine("DNI: " + this.DNI.ToString());
             sb.AppendFormat("NOMBRE COMPLETO: {0}, {1}", this.Apellido, this._nombre);
-            sb.AppendLine("NACIONALIDAD: " + this.Nacionalidad.ToString());
+            sb.AppendFormat("\nNACIONALIDAD: " + this.Nacionalidad);
 
             return sb.ToString();
         }
